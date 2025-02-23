@@ -1,7 +1,7 @@
 # *MCQ Generator with Flask and AWS Bedrock*
 
 ## *📌 Overview*
-This project is a *Flask-based MCQ generator* that extracts text from uploaded *PDF, DOCX, and TXT files, generates **multiple-choice questions (MCQs)* using *AWS Bedrock, and allows users to **download the MCQs as a PDF*.
+This project is a *PYTHON-Flask-based MCQ generator* that extracts text from uploaded *PDF, DOCX, and TXT files, generates **multiple-choice questions (MCQs)* using *AWS Bedrock, and allows users to **download the MCQs as a PDF*.
 
 ## *🛠 Tech Stack*
 - *Flask* (Python Web Framework)
