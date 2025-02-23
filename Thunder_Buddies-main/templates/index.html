@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQ Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e2e;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff79c6;
+            transition: transform 0.3s;
+        }
+        h1:hover {
+            transform: scale(1.1);
+        }
+        form {
+            background: #282a36;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 121, 198, 0.3);
+            transition: transform 0.3s;
+        }
+        form:hover {
+            transform: scale(1.05);
+        }
+        input, select, button {
+            font-size: 1rem;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            transition: background 0.3s, transform 0.2s;
+        }
+        input, select {
+            background: #44475a;
+            color: white;
+        }
+        input:hover, select:hover {
+            background: #6272a4;
+        }
+        button {
+            background-color: #50fa7b;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #40d570;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload File for MCQ Generation</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <input type="number" name="num_mcqs" min="1" max="50" placeholder="Number of MCQs" required>
+        <select name="difficulty">
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+        <select name="num_options">
+            <option value="2">2 Options</option>
+            <option value="3">3 Options</option>
+            <option value="4">4 Options</option>
+            <option value="5">5 Options</option>
+        </select>
+        <button type="submit">Generate MCQs</button>
+    </form>
+</body>
+</html>

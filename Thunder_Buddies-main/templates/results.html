@@ -1,0 +1,405 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQs Generated</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e2e;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff79c6;
+        }
+        .mcq-box {
+            background: #282a36;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: inline-block;
+            width: 60%;
+        }
+        .answer {
+            color: #50fa7b;
+            font-weight: bold;
+        }
+        .mcq-item {
+            display: block;
+            padding: 5px 0;
+        }
+        .download {
+            display: inline-block;
+            font-size: 1.2rem;
+            background: #ff5555;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .download:hover {
+            background: #ff3333;
+        }
+        .error {
+            font-size: 1.2rem;
+            color: #ff5555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generated MCQs</h1>
+    <div class="mcq-box">
+        {% if mcqs and mcqs|length >= 5 %}
+            {% for line in mcqs %}
+                {% if "Answer:" in line %}
+                    <div class="mcq-item answer">{{ line }}</div>
+                {% else %}
+                    <div class="mcq-item">{{ line }}</div>
+                {% endif %}
+            {% endfor %}
+            <a class="download" href="/download/{{ pdf_filename }}">Download as PDF</a>
+        {% else %}
+            <div class="error">Not enough MCQs generated. Please try again with more input.</div>
+        {% endif %}
+    </div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQs Generated</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e2e;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff79c6;
+        }
+        .mcq-box {
+            background: #282a36;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: inline-block;
+            width: 60%;
+        }
+        .answer {
+            color: #50fa7b;
+            font-weight: bold;
+        }
+        .mcq-item {
+            display: block;
+            padding: 10px 0;
+        }
+        .download {
+            display: inline-block;
+            font-size: 1.2rem;
+            background: #ff5555;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .download:hover {
+            background: #ff3333;
+        }
+        .error {
+            font-size: 1.2rem;
+            color: #ff5555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generated MCQs</h1>
+    <div class="mcq-box">
+        {% if mcqs and mcqs|length >= 5 %}
+            {% for line in mcqs %}
+                {% if line.startswith("Answer:") %}
+                    <div class="mcq-item answer">{{ line }}</div>
+                {% else %}
+                    <div class="mcq-item">{{ line }}</div>
+                {% endif %}
+            {% endfor %}
+            <a class="download" href="/download/{{ pdf_filename }}">Download as PDF</a>
+        {% else %}
+            <div class="error">Not enough MCQs generated. Please try again with more input.</div>
+        {% endif %}
+    </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQs Generated</title>
+    <style>
+        :root {
+            --bg-color: #1e1e2e;
+            --text-color: white;
+            --question-color: #ffb86c;
+            --answer-color: #50fa7b;
+            --box-bg: #282a36;
+            --button-bg: #ff5555;
+            --button-hover: #ff3333;
+        }
+        body.light-mode {
+            --bg-color: #f5f5f5;
+            --text-color: #1e1e2e;
+            --question-color: #d65a31;
+            --answer-color: #007f5f;
+            --box-bg: #ffffff;
+            --button-bg: #ff7f50;
+            --button-hover: #ff6347;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 50px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        h1 {
+            color: var(--question-color);
+        }
+        #clock {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--answer-color);
+            margin-bottom: 20px;
+        }
+        .mcq-box {
+            background: var(--box-bg);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: inline-block;
+            width: 60%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+        .question {
+            font-weight: bold;
+            color: var(--question-color);
+            padding-top: 10px;
+        }
+        .answer {
+            color: var(--answer-color);
+            font-weight: bold;
+        }
+        .mcq-item {
+            display: block;
+            padding: 5px 0;
+        }
+        .download, .toggle-mode {
+            display: inline-block;
+            font-size: 1.2rem;
+            background: var(--button-bg);
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .download:hover, .toggle-mode:hover {
+            background: var(--button-hover);
+        }
+        .error {
+            font-size: 1.2rem;
+            color: var(--button-bg);
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById("clock").innerText = `Time: ${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+
+        function toggleMode() {
+            document.body.classList.toggle("light-mode");
+            const modeText = document.body.classList.contains("light-mode") ? "🌙 Dark Mode" : "☀️ Light Mode";
+            document.getElementById("modeToggle").innerText = modeText;
+        }
+    </script>
+</head>
+<body>
+    <div id="clock"></div>
+    <button class="toggle-mode" id="modeToggle" onclick="toggleMode()">☀️ Light Mode</button>
+    <h1>Generated MCQs</h1>
+    <div class="mcq-box">
+        {% if mcqs and mcqs|length >= 5 %}
+            {% for line in mcqs %}
+                {% if line.startswith("Q") %}
+                    <div class="mcq-item question">{{ line }}</div>
+                {% elif line.startswith("Answer:") %}
+                    <div class="mcq-item answer">{{ line }}</div>
+                {% else %}
+                    <div class="mcq-item">{{ line }}</div>
+                {% endif %}
+            {% endfor %}
+            <a class="download" href="/download/{{ pdf_filename }}">Download as PDF</a>
+        {% else %}
+            <div class="error">Not enough MCQs generated. Please try again with more input.</div>
+        {% endif %}
+    </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQs Generated</title>
+    <style>
+        :root {
+            --bg-color: #1e1e2e;
+            --text-color: white;
+            --question-color: #ffb86c;
+            --answer-color: #50fa7b;
+            --box-bg: #282a36;
+            --button-bg: #ff5555;
+            --button-hover: #ff3333;
+        }
+        body.light-mode {
+            --bg-color: #f5f5f5;
+            --text-color: #1e1e2e;
+            --question-color: #d65a31;
+            --answer-color: #007f5f;
+            --box-bg: #ffffff;
+            --button-bg: #ff7f50;
+            --button-hover: #ff6347;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 50px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        h1 {
+            color: var(--question-color);
+        }
+        #clock {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--answer-color);
+            margin-bottom: 20px;
+        }
+        .mcq-box {
+            background: var(--box-bg);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            display: inline-block;
+            width: 60%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+        .question {
+            font-weight: bold;
+            color: var(--question-color);
+            padding-top: 10px;
+        }
+        .answer {
+            color: var(--answer-color);
+            font-weight: bold;
+        }
+        .mcq-item {
+            display: block;
+            padding: 5px 0;
+        }
+        .download, .toggle-mode {
+            display: inline-block;
+            font-size: 1.2rem;
+            background: var(--button-bg);
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        .download:hover, .toggle-mode:hover {
+            background: var(--button-hover);
+        }
+        .error {
+            font-size: 1.2rem;
+            color: var(--button-bg);
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById("clock").innerText = `Time: ${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+
+        function toggleMode() {
+            document.body.classList.toggle("light-mode");
+            const modeText = document.body.classList.contains("light-mode") ? "🌙 Dark Mode" : "☀️ Light Mode";
+            document.getElementById("modeToggle").innerText = modeText;
+        }
+    </script>
+</head>
+<body>
+    <div id="clock"></div>
+    <button class="toggle-mode" id="modeToggle" onclick="toggleMode()">☀️ Light Mode</button>
+    <h1>Generated MCQs</h1>
+    <div class="mcq-box">
+        {% if mcqs and mcqs|length >= 5 %}
+            {% for line in mcqs %}
+                {% if line.startswith("Q") %}
+                    <div class="mcq-item question">{{ line }}</div>
+                {% elif line.startswith("Answer:") %}
+                    <div class="mcq-item answer">{{ line }}</div>
+                {% else %}
+                    <div class="mcq-item">{{ line }}</div>
+                {% endif %}
+            {% endfor %}
+            <a class="download" href="/download/{{ pdf_filename }}">Download as PDF</a>
+        {% else %}
+            <div class="error">Not enough MCQs generated. Please try again with more input.</div>
+        {% endif %}
+    </div>
+</body>
+</html>
+
